@@ -3,18 +3,7 @@ import localFont from 'next/font/local';
 import './globals.css';
 import ClientLayout from './ClientLayOut';
 import RecoilProvider from './provider/RecoilProvider';
-
-//이후 폰트 변경
-const geistSans = localFont({
-    src: './fonts/GeistVF.woff',
-    variable: '--font-geist-sans',
-    weight: '100 900',
-});
-const geistMono = localFont({
-    src: './fonts/GeistMonoVF.woff',
-    variable: '--font-geist-mono',
-    weight: '100 900',
-});
+import { Pretendard } from './fonts/font';
 
 export const metadata: Metadata = {
     title: 'Jecheon Travel League',
@@ -29,7 +18,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <head></head>
-            <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+            <body className={Pretendard.className}>
                 <RecoilProvider>
                     <ClientLayout>{children}</ClientLayout>
                 </RecoilProvider>

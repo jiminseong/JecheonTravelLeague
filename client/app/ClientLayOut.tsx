@@ -25,7 +25,7 @@ const ClientLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => 
     // };
 
     return (
-        <div className="w-full min-w-[320px] max-w-[var(--max-width)] mx-auto fixed inset-0 z-[210] overscroll-none">
+        <div className="w-full min-w-[320px] max-w-[var(--max-width)] mx-auto fixed inset-0 z-[210] bg-tertiary overscroll-none">
             {/* <Header user={user!} onLogout={onLogout} /> */}
             {children}
         </div>
