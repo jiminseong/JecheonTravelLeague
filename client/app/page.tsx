@@ -1,2 +1,2 @@
-import OnboardingPage from '@/pages/onboarding';
+import OnboardingPage from '@/views/onboarding';
 export default OnboardingPage;

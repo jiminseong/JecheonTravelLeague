@@ -1,19 +1,15 @@
 import React from 'react';
 
-export interface PageWrapperProps {
-    padding?: string;
-    children?: React.ReactNode;
+interface Props {
+    paddingX?: string; // 좌우 패딩을 위한 새로운 props
+    children: React.ReactNode;
 }
 
-const PageWrapper = ({ padding = '1em', children, ...props }: PageWrapperProps) => {
-    // const wrapperClass = classNames('flex flex-col items-center', {
-    //     [`px-${padding}`]: padding, // padding 값을 동적으로 처리
-    // });
-
+const PageWrapper = ({ paddingX = '16px', children, ...props }: Props) => {
     return (
         <div
-            style={{ padding: `${padding}` }}
-            // className={wrapperClass}
+            className="flex h-[100vh] flex-col items-center justify-evenly gap-4"
+            style={{ paddingLeft: paddingX, paddingRight: paddingX }} // 좌우 패딩만 적용
             {...props}
         >
             {children}

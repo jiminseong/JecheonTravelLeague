@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from '../../../public/logos/logo.svg';
 import Image from 'next/image';
 
 interface LogoProps {
@@ -21,7 +20,7 @@ const Logo: React.FC<LogoProps> = ({ width, size }) => {
         }
     };
 
-    return <Image src={logo} alt="Logo" width={getSize()} />;
+    return <Image src="/images/jecheonLogo.svg" alt="Logo" width={getSize()} height={getSize()} />;
 };
 
 export default Logo;
