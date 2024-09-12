@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
 import ClientLayout from './ClientLayOut';
+import RecoilProvider from './provider/RecoilProvider';
 
 //이후 폰트 변경
 const geistSans = localFont({
@@ -29,7 +30,9 @@ export default function RootLayout({
         <html lang="en">
             <head></head>
             <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-                <ClientLayout>{children}</ClientLayout>
+                <RecoilProvider>
+                    <ClientLayout>{children}</ClientLayout>
+                </RecoilProvider>
             </body>
         </html>
     );
