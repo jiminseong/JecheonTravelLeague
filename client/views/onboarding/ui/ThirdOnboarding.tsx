@@ -21,7 +21,7 @@ const ThirdOnboarding: React.FC<ThirdOnboardingProps> = ({}) => {
             <div className="text-jgreen flex gap-[1rem] text-[3em] font-bold">
                 메이트와! <Image src={mateImage} alt="가족 이미지" width={48} />
             </div>
-            <Image src={smaileImage} alt="스마일 아이콘" width={150} />
+            <Image className="absolute right-[1em] top-[40%]" src={smaileImage} alt="스마일 아이콘" width={150} />
         </div>
     );
 };
