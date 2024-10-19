@@ -4,8 +4,10 @@ import React, { useState } from 'react';
 import Button from '@/widgets/button/Button';
 import PageWrapper from '@/widgets/wrapper/PageWrapper';
 import FirstOnboarding from './ui/FirstOnboarding';
-import SecondOnborading from './ui/SecondOnborading';
+import SecondOnborading from './ui/ThirdOnboarding';
 import { useRouter } from 'next/navigation';
+import ProgressCircle from './ui/ProgressCircle';
+import ThirdOnboarding from './ui/ThirdOnboarding';
 
 const OnboardingPage: React.FC = () => {
     const [page, setPages] = useState(0);
@@ -15,10 +17,12 @@ const OnboardingPage: React.FC = () => {
     const handlePage = () => {
         if (page === 0) {
             setPages(1);
-            setLabel('제천메이트와 시작하기');
-        } else if (page === 1) {
-            setPages(0);
             setLabel('다음');
+        } else if (page === 1) {
+            setPages(2);
+            setLabel('제천메이트와 시작하기');
+            // 라우팅 추가
+        } else if (page === 2) {
             router.push('/login');
             // 라우팅 추가
         }
@@ -28,7 +32,8 @@ const OnboardingPage: React.FC = () => {
         <PageWrapper paddingX="2em">
             {page === 0 && <FirstOnboarding />}
             {page === 1 && <SecondOnborading />}
-
+            {page === 2 && <ThirdOnboarding />}
+            <ProgressCircle page={page} />
             <Button size="medium" variant="primary" onClick={() => handlePage()}>
                 {label}
             </Button>

@@ -5,9 +5,9 @@ import familyImage from '/public/images/familyImage.svg';
 import heartImage from '/public/images/heartImage.svg';
 import mateImage from '/public/images/mateImage.svg';
 
-interface FirstOnboardingProps {}
+interface SecondOnboardingProps {}
 
-const FirstOnboarding: React.FC<FirstOnboardingProps> = ({}) => {
+const SecondOnboarding: React.FC<SecondOnboardingProps> = ({}) => {
     return (
         <div className="flex h-[70%] w-[100%] flex-col items-start justify-start gap-[1em] pl-[2em]">
             <div className="text-jblue flex gap-[1rem] text-[3em] font-bold">
@@ -26,4 +26,4 @@ const FirstOnboarding: React.FC<FirstOnboardingProps> = ({}) => {
     );
 };
 
-export default FirstOnboarding;
+export default SecondOnboarding;

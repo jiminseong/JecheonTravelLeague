@@ -11,7 +11,7 @@ const SIZE_MAP: { [k in Props['size']]: string } = {
 export default function Input({ size, placeholder }: Props) {
     return (
         <input
-            className={`bg-lightgrey2 box-border rounded-full border-[1px] border-black px-4 font-light text-black placeholder-grey focus:outline-none disabled:text-opacity-50 ${SIZE_MAP[size]}`}
+            className={`box-border rounded-full border-[1px] border-black bg-lightgrey2 px-4 font-light text-black placeholder-grey focus:outline-none disabled:text-opacity-50 ${SIZE_MAP[size]}`}
             placeholder={placeholder}
         />
     );

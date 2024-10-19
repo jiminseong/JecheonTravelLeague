@@ -8,11 +8,22 @@ const config: Config = {
         './widgets/**/*.{js,ts,jsx,tsx,mdx}',
     ],
     theme: {
+        fontSize: {
+            sm: '0.8rem',
+            base: '1rem',
+            xl: '1.25rem',
+            '2xl': '1.563rem',
+            '3xl': '1.953rem',
+            '4xl': '2.441rem',
+            '5xl': '3.052rem',
+        },
         extend: {
             colors: {
-                primary: '#8ADF28',
-                secondary: '#E1F2CD',
-                tertiary: '#FCFFF8',
+                jwhite: '#FCFFF8',
+                jgreen: '#77B72D',
+                jblue: '#009FE0',
+                jorange: '#EC6A24',
+                lightGreen: '8ADF28',
                 black: '#030303',
                 grey: '#4D4D4D',
                 lightgrey: '#C1C1C1',

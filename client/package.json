@@ -9,6 +9,7 @@
         "lint": "next lint"
     },
     "dependencies": {
+        "@next/swc-darwin-arm64": "^15.0.0-rc.1",
         "classnames": "2.5.1",
         "framer-motion": "11.5.4",
         "ky": "1.7.2",
