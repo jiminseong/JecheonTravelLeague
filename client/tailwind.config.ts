@@ -29,6 +29,9 @@ const config: Config = {
                 lightgrey: '#C1C1C1',
                 lightgrey2: '#E3E3E3',
             },
+            boxShadow: {
+                custom: '0px -2px 10px rgba(3, 3, 3, 0.1)', // 원하는 box-shadow 추가
+            },
         },
     },
     plugins: [],
