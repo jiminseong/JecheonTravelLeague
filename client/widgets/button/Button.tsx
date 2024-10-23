@@ -7,7 +7,7 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const SIZE_MAP: { [k in Props['size']]: string } = {
-    medium: 'w-full py-[1em]  font-semibold',
+    medium: 'w-full py-[1.25em]  font-semibold',
     full: 'w-full py-[1em] font-semibold', // 올바르게 변경
 };
 
