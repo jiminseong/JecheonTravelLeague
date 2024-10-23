@@ -28,7 +28,7 @@ const LoginPage: React.FC<LoginPageProps> = ({}) => {
                     </p>
                 </div>
 
-                <Button size="medium" variant="primary" onClick={() => router.push('/login/origin')}>
+                <Button size="medium" variant="primary" onClick={() => router.push('/login/process')}>
                     다음
                 </Button>
 

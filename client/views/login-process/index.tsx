@@ -7,12 +7,13 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import LineInput from '@/widgets/input/LineInput';
 
-interface LoginOriginPageProps {}
+interface LoginProcessPageProps {}
 
-const LoginOriginPage: React.FC<LoginOriginPageProps> = ({}) => {
+const LoginProcessPage: React.FC<LoginProcessPageProps> = ({}) => {
     const router = useRouter();
-
+    const [label, setLabel] = useState('다음');
     const questions = [
+        '이름을 입력해주세요',
         '나이를 입력해주세요',
         '음식 취향을 입력해주세요',
         '여행 취향을 입력해주세요',
@@ -20,20 +21,16 @@ const LoginOriginPage: React.FC<LoginOriginPageProps> = ({}) => {
         '비밀번호를 입력해주세요',
     ];
 
-    const placeholderss = [
-        '지민성',
-        '24',
-        '매운 음식은 안좋아하고, 건강한 음식이..',
-        '조용한 곳이 좋고, 산과 계곡을 좋아해요..',
-    ];
-
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
 
     const handleNextClick = () => {
-        if (currentQuestionIndex < questions.length - 1) {
+        if (currentQuestionIndex < questions.length - 2) {
+            setCurrentQuestionIndex(currentQuestionIndex + 1);
+        } else if (currentQuestionIndex < questions.length - 1) {
+            setLabel('가입 완료');
             setCurrentQuestionIndex(currentQuestionIndex + 1);
         } else {
-            router.push('/next-step'); // 마지막 질문 후 이동할 경로 설정
+            router.push('/home'); // 마지막 질문 후 이동할 경로 설정
         }
     };
 
@@ -43,14 +40,14 @@ const LoginOriginPage: React.FC<LoginOriginPageProps> = ({}) => {
                 <Image src={leftArrow} alt="왼쪽 뒤로가기" onClick={() => router.push('/login')} />
                 <div className="mb-[1em] flex flex-col justify-start gap-[1em]">
                     <p className="mt-[3em] text-[28px] font-bold text-black">{questions[currentQuestionIndex]}</p>
-                    <LineInput placeholder="지민성" style="text-[1.25em] font-semibold" />
+                    <LineInput placeholder="" style="text-[1.25em] font-semibold" />
                 </div>
             </div>
             <Button size="medium" variant="primary" onClick={handleNextClick}>
-                다음
+                {label}
             </Button>
         </PageWrapper>
     );
 };
 
-export default LoginOriginPage;
+export default LoginProcessPage;
