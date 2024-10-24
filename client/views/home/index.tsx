@@ -1,6 +1,6 @@
 import BottomNavigationBar from '@/widgets/navigation/BottomNavigationBar';
 import TopNavigationText from '@/widgets/navigation/TopNavigationText';
-import PageWrapper from '@/widgets/wrapper/PageWrapper';
+
 import React from 'react';
 import MyWallet from './ui/MyWallet';
 import JaeChoenDeliciousRestaurant from './ui/JaeChoenDeliciousRestaurant';
