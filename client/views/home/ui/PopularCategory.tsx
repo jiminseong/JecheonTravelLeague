@@ -111,7 +111,7 @@ const PopularCategory: React.FC<PopularCategoryProps> = ({}) => {
                 onTouchMove={(e) => handleDragMove(e.touches[0].clientX)}
                 onTouchEnd={handleDragEnd}
             >
-                {categories.map((category, index) => (
+                {categories.map((category) => (
                     <div
                         className="flex transition-transform duration-200"
                         style={{

@@ -20,6 +20,7 @@ const config: Config = {
         extend: {
             colors: {
                 jwhite: '#FCFFF8',
+                jbackground: '#FCFFF8',
                 jgreen: '#77B72D',
                 jblue: '#009FE0',
                 jorange: '#EC6A24',
