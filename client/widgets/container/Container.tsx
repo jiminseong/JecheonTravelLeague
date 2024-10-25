@@ -9,7 +9,7 @@ const Container: React.FC<ContainerProps> = ({ className = '', children }) => {
     return (
         <div
             className={`rounded-2xl bg-[#FFFFFF] ${className}`}
-            style={{ boxShadow: '0px 2px 20px 1px rgba(3, 3, 3, 0.05)' }}
+            style={{ boxShadow: '0px 2px 20px 0 rgba(119,183,45,0.1)' }}
         >
             {children}
         </div>

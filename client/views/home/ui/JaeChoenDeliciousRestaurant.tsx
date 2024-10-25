@@ -98,7 +98,7 @@ const JaeChoenDeliciousRestaurant: React.FC<JaeChoenDeliciousRestaurantProps> = 
                 onTouchMove={(e) => handleDragMove(e.touches[0].clientX)} // 터치 이벤트
                 onTouchEnd={handleDragEnd} // 터치 이벤트
             >
-                {slides.map((slide, index) => (
+                {slides.map((slide) => (
                     <div
                         className="flex transition-transform duration-200"
                         style={{

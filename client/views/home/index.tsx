@@ -11,7 +11,7 @@ interface HomePageProps {}
 
 const HomePage: React.FC<HomePageProps> = ({}) => {
     return (
-        <div className="relative h-[100vh] w-full overflow-hidden px-[1em] pb-[15%] pt-[35%] md:pt-[25%]">
+        <div className="relative h-[100vh] w-full overflow-hidden px-[1em] pb-[20%] pt-[35%] md:pb-[20%] md:pt-[15%]">
             <TopNavigationText />
             <div className="flex h-full w-full flex-col gap-[1em] overflow-scroll">
                 <MyWallet />
