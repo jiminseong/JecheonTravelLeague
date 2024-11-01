@@ -1,15 +1,21 @@
 'use client';
 import Button from '@/widgets/button/Button';
 import PageWrapper from '@/widgets/wrapper/PageWrapper';
-import React from 'react';
+import React, { useState } from 'react';
 import leftArrow from '@/public/icons/leftArrow.svg';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import Modal from './ui/Modal';
 
 interface LoginPageProps {}
 
 const LoginPage: React.FC<LoginPageProps> = ({}) => {
     const router = useRouter();
+    const [modalOpen, setModalOpen] = useState(false);
+
+    const handleModal = () => {
+        setModalOpen(!modalOpen);
+    };
 
     return (
         <PageWrapper paddingX="2em">
@@ -38,7 +44,8 @@ const LoginPage: React.FC<LoginPageProps> = ({}) => {
                     <div className="h-1 w-full bg-[#EEF7E3]" />
                 </div>
 
-                <div className="flex h-full w-full flex-col gap-[1em]">
+                <div onClick={handleModal} className="relative flex w-full flex-col gap-[1em]">
+                    {modalOpen && <Modal onClick={handleModal} />}
                     <div className="flex w-full items-center justify-center rounded-[16px] border-0 bg-[#FDE502] py-[1.25em] font-semibold">
                         카카오로 계속하기
                     </div>
