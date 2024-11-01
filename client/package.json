@@ -12,11 +12,11 @@
         "@next/swc-darwin-arm64": "^15.0.0-rc.1",
         "classnames": "2.5.1",
         "framer-motion": "11.5.4",
+        "jotai": "^2.10.1",
         "ky": "1.7.2",
-        "next": "14.2.10",
+        "next": "^15.0.2",
         "react": "18",
-        "react-dom": "18",
-        "recoil": "0.7.7"
+        "react-dom": "18"
     },
     "devDependencies": {
         "@types/node": "20",

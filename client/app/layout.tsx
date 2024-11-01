@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import ClientLayout from './ClientLayOut';
-import RecoilProvider from './provider/RecoilProvider';
 import { Pretendard } from './fonts/font';
 
 export const metadata: Metadata = {
@@ -18,9 +17,7 @@ export default function RootLayout({
         <html lang="en">
             <head></head>
             <body className={Pretendard.className}>
-                <RecoilProvider>
-                    <ClientLayout>{children}</ClientLayout>
-                </RecoilProvider>
+                <ClientLayout>{children}</ClientLayout>
             </body>
         </html>
     );
